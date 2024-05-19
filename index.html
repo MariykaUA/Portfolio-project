@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/main.css">
+<title>Portfolio website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Serif&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <img src="img/logo.svg" alt="logo">
+        <ul>
+            <li><a name="home" href="">HOME</a></li>
+            <li class="button"><a  href="">LET'S CONNECT</a></li>
+            <li><a class="scroll" href="">WORKS</li>
+            <li><a name="CV" href="#">CV</a></li>
+            <li><a href="">ABOUT</a></li>
+        </ul>
+    </nav>
+ <main>   
+    <section class="hero-screen">
+        <section>
+            <h1>I AM UX/UI DESIGNER & FRONTEND DEVELOPER</h1>
+            <p>
+            Hi! Nice to meet you. I am Mariia from Ukraine. I love travel and <span class="sketchy-underline">web design</span>. I am a junior designer, but actually I am gonna make this world a bit better using my <span class="sketchy-underline">UX/UI skills</span>. If you are interested in connecting me, send me a message below!
+            </p>
+            <button class="contact-button">CONTACT ME</button>
+                <div class="contact-form-container">
+                    <form class="contact-form">
+                        <h2>Please leave me a message or a feedback below!</h2>
+                        <label for="name">NAME/COMPANY</label>
+                        <input type="text" id="name" name="name"  placeholder="Your name or company" required>
+                        <label for="email">E-MAIL</label>
+                        <input type="email" id="email" name="email" placeholder="Your e-mail" required>
+                        <label for="message">MESSAGE</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                        <button class="back-button">&larr; Go back to main page</button>
+                        <button type="submit">CONFIRM</button>
+                    </form>
+                </div>    
+            <div class="line-short"></div>
+            <div class="line"></div>
+        </section>
+        <div>
+            <img id="me" src="img/me-photo.svg" alt="Picture of me">
+            <img class="bg1" src="img/bg1.svg">
+            <img class="bg-me" src="img/me.svg">
+            <img class="bg2" src="img/bg2.svg">
+        </div>
+    </section>
+    <section class="my-works">
+        <h2>MY WORKS</h2>
+            <ul>
+                <li class="works">
+                    <img src="img/gud.svg" alt="Website 'GUD'" >
+                    <div>
+                        <h3>E_COMMERCE WEBSITE “GUD”</h3>
+                        <p>Redesign UX/UI</p>
+                        <button class="seeMore">&larr; See more on Behance</button>
+                    </div>
+                </li>
+                <li class="works" id="bgcolor">
+                    <div class="leftside">
+                        <h3>LANDING PAGE “APPLE”</h3>
+                        <p>Redesign UX/UI</p>
+                    </div>
+                    <img src="img/apple.svg" alt="Landing page 'APPLE'" >
+                </li>
+                <li class="works">
+                    <img src="img/monobank.svg" alt="Website 'MONOBANK'" data-large="img/monobankLarge.svg">
+                    <div>
+                        <h3>WEBSITE “MONOBANK”</h3>
+                        <p>Redesign UX/UI</p>
+                    </div>
+                </li>
+                <li class="works" id="bgcolor">
+                    <div class="leftside">
+                        <h3>BLOG</h3>
+                        <p>Redesign UX/UI</p>
+                    </div>
+                    <img src="img/blog.svg" alt="Blog" >
+                </li>
+                <li class="works">
+                    <img src="img/goody.svg"   alt="Website 'GOODY'">
+                    <div>
+                        <h3>WEBSITE "GOODY"</h3>
+                        <p>Redesign UX/UI</p>
+                     </div>
+                </li>
+            </ul>
+    </section>
+    <section class="ux-ui">
+        <h2>MY EDUCATION</h2>
+            <section class="drop">
+                <div class="dropdown">
+                    <button  class="dropbtn">UX/UI design</button>
+                    <ul class="dropdown-content">
+                        <li>                 
+                            <p>06.2023 - 10.2023</p>
+                            <h3>Certificate - Course “UI/UX design”, Design Kitchen School, Kharkiv, Ukraine (online)</h3>
+                            <p>Typography / Composition of a website / Analyzing data / Wireframes</p>
+                        </li>
+                        <li>
+                            <p>08.2022 - 10.2022</p>
+                            <h3>Certificate - Course “Web design in Figma, UX/UI” - Udemy online</h3>
+                            <p>Instruments of Figma, hotkeys / Adaptive design</p>
+                        </li>
+                        <li>
+                            <p>08.2021</p>
+                            <h3>Certificate - Course “Web design” - Way Up school, online</h3>
+                            <p>Basic UX/UI design / Figma / Prototype / Behance / Awwwards / Dribble</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Web Development</button>
+                    <ul class="dropdown-content">
+                        <li>
+                            <p>03.2024 - PRESENT</p>
+                            <h3>Powercoders Bootcamp - ICT Work Integration Program, Zürich</h3>
+                            <p>HTML / CSS / JavaScript / Business & social skills</p>
+                        </li>
+                        <li>
+                            <p>03.2024 - 04.2024</p>
+                            <h3>Bootcamp - Frontend Masters, online</h3>
+                            <p>Introduction to HTML / CSS / JavaScript</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button  class="dropbtn">University</button>
+                    <ul class="dropdown-content">
+                        <li> 
+                            <p>09.2020 - 12.2021</p>
+                            <h3>Master Degree - National University of Ukraine on Physical Education and Sport, Kyiv, Ukraine</h3>
+                        <p>Organize documentation / collaboration in team / Excel functions</p>
+                        </li>
+                        <li> 
+                            <p>09.2016 - 06.2020</p>
+                            <h3>Bachelor Degree - Yaroslav Mudryi National Law University,
+                                Kharkiv, Ukraine</h3>
+                        <p>People rights / communication in the society</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="icons">
+                <img src="img/design.svg" alt="design">
+                <img src="img/development.svg" alt="development">
+                <img src="img/university.svg" alt="university">
+            </section>
+    </section>
+    <section class="hard-skills">
+        <section>
+            <h2>HARD SKILLS</h2>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Figma</li>
+                <li>UX/UI design principles</li>
+                <li>Github</li>
+                <li>Git & CLI</li>
+            </ul>
+        </section>
+        <section>
+            <h2>SOFT SKILLS</h2>
+            <ul>
+                <li>Time managment</li>
+                <li>Problem-solving</li>
+                <li>Critical thinking</li>
+                <li>Team worker</li>
+                <li>Pay attention to details and people</li>
+            </ul>
+        </section>
+    </section>
+</main>
+<footer>
+        <section class="footer-lines">
+            <section>
+                <p id="email">mariiahoienko1999@gmail.com</p>
+                <p>I will be glad to cooperate and create something special for your business.</p>
+            </section>
+            <div>
+                <div class="footer-line"></div>
+                <div class="footer-line-short"></div>
+            </div>
+        </section>
+        <div class="footer">
+            <button class="contact-button">CONTACT ME</button>
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <h2>Please leave me a message or a feedback below!</h2>
+                            <label for="name">NAME/COMPANY</label>
+                            <input type="text" id="name" name="name"  placeholder="Your name or company" required>
+                            <label for="email">E-MAIL</label>
+                            <input type="email" id="email" name="email" placeholder="Your e-mail" required>
+                            <label for="message">MESSAGE</label>
+                            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                            <button class="back-button">&larr; Go back to main page</button>
+                            <button type="submit">CONFIRM</button>
+                        </form>
+                    </div>    
+            <img class="logo" src="img/logo.svg" alt="logo">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/mari_ukraine/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank">
+                    <img src="img/instagram.svg" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/mariiahoienko1999/" target="_blank">
+                    <img src="img/linkedin.svg" alt="Linkedin">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.behance.net/6ad6275e" target="_blank">
+                    <img src="img/behance.svg" alt="Behance">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/tardis.world" target="_blank">
+                    <img src="img/facebook.svg" alt="Facebook">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="last-line"></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
