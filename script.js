@@ -1,9 +1,4 @@
 
-/* JAVASCRIPT:
-- add transition between sections
-cv, works, lets connect
-*/
-
 /* scroll to section "MY WORKS"*/
     const scrollLink = document.querySelector('.scroll');
 
