@@ -10,9 +10,93 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Serif&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     </head>
 <body>
-    
+    <nav>
+        <img src="img/logo.svg" alt="logo">
+        <ul>
+            <li><a name="home" href="">HOME</a></li>
+            <li><button class="contact-button" id="button"  href="">LET'S CONNECT</button></li>
+            <li><a href="index.html#my-works">WORKS</li>
+            <li><a name="CV" href="#">CV</a></li>
+            <li><a name="aboutme" href="">ABOUT</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="about">
+            <div>
+                <img class="first-img" src="img/about/about-me1.svg" alt="photo of me">
+                <div class="inline-img">
+                    <img src="img/about/about-me2.svg" alt="photo of me">
+                    <img src="img/about/about-me3.svg" alt="photo of me">
+                </div>
+            </div>
+            <section>
+                <h2>MY LIFESTYLE</h2>
+                <p>Hi there! I am a junior UX/UI designer. I love to make creative things and to help people. So, I decided to study UX/UI design to bring my personal qualities to life.</p>
+                    
+                <p>Also, during all my life I do sport. Actually I run everyday and I go orienteering on weekends. When you run with map and compass you need to make the best decisions and to solve problems pretty quickly. So, I think that my problem-solving skills are at a good level.</p>
+
+                <p>My favorite part of my life is traveling and exploring the world. I would like to bring my passion for the new things and knowledges in the field of UX/UI design.</p>
+
+                <p>Please, feel free to contact me on E-mail, Linkedin, Behance, Instagram, Facebook.</p>
+                <button class="CV">VIEW MY CV</button>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <section class="footer-lines">
+            <section>
+                <p id="email">mariiahoienko1999@gmail.com</p>
+                <p>I will be glad to cooperate and create something special for your business.</p>
+            </section>
+            <div>
+                <div class="footer-line"></div>
+                <div class="footer-line-short"></div>
+            </div>
+        </section>
+        <div class="footer">
+            <button class="contact-button">CONTACT ME</button>
+                    <div class="contact-form-container">
+                        <form class="contact-form">
+                            <h2>Please leave me a message or a feedback below!</h2>
+                            <label for="name">NAME/COMPANY</label>
+                            <input type="text" id="name" name="name"  placeholder="Your name or company" required>
+                            <label for="email">E-MAIL</label>
+                            <input type="email" id="email" name="email" placeholder="Your e-mail" required>
+                            <label for="message">MESSAGE</label>
+                            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                            <button class="back-button">&larr; Go back to main page</button>
+                            <button type="submit">CONFIRM</button>
+                        </form>
+                    </div>    
+            <img class="logo" src="img/logo.svg" alt="logo">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/mari_ukraine/?igshid=OGQ5ZDc2ODk2ZA%3D%3D" target="_blank">
+                    <img src="img/instagram.svg" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/mariiahoienko1999/" target="_blank">
+                    <img src="img/linkedin.svg" alt="Linkedin">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.behance.net/6ad6275e" target="_blank">
+                    <img src="img/behance.svg" alt="Behance">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/tardis.world" target="_blank">
+                    <img src="img/facebook.svg" alt="Facebook">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="last-line"></div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

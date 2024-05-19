@@ -1,14 +1,7 @@
-/* TO DO: 
-
-- make all pages responsive
-- change content + text
-- commit and push HTML & CSS in new repository
-*/
 
 /* JAVASCRIPT:
--animation background
-- make gradient on h1
 - add transition between sections
+cv, works, lets connect
 */
 
 /* scroll to section "MY WORKS"*/
@@ -21,20 +14,30 @@
     });
 
 /* open CV PDF in new tab */
+document.addEventListener('DOMContentLoaded', function() {
     const cvLink = document.querySelector('a[name="CV"]');
 
-    // Add an event listener to the CV link
-    cvLink.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default anchor behavior
-        const pdfURL = "https://www.linkedin.com/posts/mariiahoienko1999_powercoders-cv-activity-7193263451425644544-WQlh?utm_source=share&utm_medium=member_desktop";
-        window.open(pdfURL, "_blank");
-    });
+    if (cvLink) {
+        cvLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            const pdfURL = "https://www.linkedin.com/posts/mariiahoienko1999_powercoders-cv-activity-7193263451425644544-WQlh?utm_source=share&utm_medium=member_desktop";
+            window.open(pdfURL, "_blank");
+        });
+    }
+});
+
 
 /* go to "HOME"*/
     document.querySelector("a[name='home']").addEventListener("click", function(event) {
         event.preventDefault(); // Prevent the default behavior of the link
         window.location.href = "index.html"; 
     });
+
+/* go to "About me"*/
+document.querySelector("a[name='aboutme']").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+    window.location.href = "about.html"; 
+});
 
 
 /* open Behance link in new tab */
