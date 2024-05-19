@@ -160,24 +160,24 @@ button {
         cursor: pointer;
 }
     
-button:hover {
+button:hover, button.CV:hover {
     background-image: linear-gradient(-22deg, #FB6CDF 0%, #8E29FF 66%, #725af8 100%);
     box-shadow: 0px 4px 12px rgba(52, 42, 109, 0.15);
     color:#F9F9F9;
     border: 0.063rem #F9F9F9 solid;
     }
 
-button:active {
+button:active{
     background-color: #922CD0;
     background-image: none;
     opacity: 66%;
     border: 0.063rem #F9F9F9 solid;
 }
 
-#button:active {
+#button:active, button.CV:active {
     background-color: #912cd093;
     background-image: none;
-    border: #F9F9F9;
+    border: #F9F9F9 1px solid;
     color:#F9F9F9 ;
     opacity: 100%;
     box-shadow: none;

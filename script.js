@@ -59,114 +59,79 @@ document.querySelector("a[name='aboutme']").addEventListener("click", function(e
     paragraph.innerHTML = paragraph.innerHTML.replace(new RegExp(textToUnderline, 'g'), `<span class="sketchy-underline">${textToUnderline}</span>`)
                                             .replace(new RegExp(newTextToUnderline, 'g'), `<span class="sketchy-underline">${newTextToUnderline}</span>`);
 
-/*contact form go back button*/ 
-    document.addEventListener('DOMContentLoaded', function() {
-        const contactButton = document.querySelector('.contact-button');
+/*contact form*/
+document.addEventListener('DOMContentLoaded', function() {
+    const contactButtons = document.querySelectorAll('.contact-button');
 
-        const contactFormContainer = document.querySelector('.contact-form-container');
+    const contactFormContainer = document.querySelector('.contact-form-container');
+    const backButton = document.querySelector('.back-button');
+    const contactForm = document.querySelector('.contact-form');
 
-        const backButton = document.querySelector('.back-button');
-        
-        function showContactForm() {
-            contactFormContainer.style.display = 'block';
-        }
+    function showContactForm() {
+        contactFormContainer.style.display = 'block';
+    }
 
-        function hideContactForm() {
-            contactFormContainer.style.display = 'none';
-        }
+    function hideContactForm() {
+        contactFormContainer.style.display = 'none';
+    }
 
-        // Event listener for the contact button
-        contactButton.addEventListener('click', function() {
-            showContactForm();
+    function handleFormSubmission(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+        const formData = new FormData(contactForm);
+        const formDataObject = {};
+        formData.forEach((value, key) => {
+            formDataObject[key] = value;
         });
+        console.log(formDataObject);
+        hideContactForm();
+    }
 
-        // Event listener for the back button
-        backButton.addEventListener('click', function() {
-            hideContactForm();
-        });
-    });
-
-/*contact form*/ 
-    document.addEventListener('DOMContentLoaded', function() {
-        const contactButtons = document.querySelectorAll('.contact-button');
-
-        const contactFormContainer = document.querySelector('.contact-form-container');
-
-        const backButton = document.querySelector('.back-button');
-
-        const contactForm = document.querySelector('.contact-form');
-        
-        function showContactForm() {
-            contactFormContainer.style.display = 'block';
-        }
-
-        function hideContactForm() {
-            contactFormContainer.style.display = 'none';
-        }
-
-        function handleFormSubmission(event) {
-            event.preventDefault(); // Prevent the default form submission behavior
-            
-            // Collect form data
-            const formData = new FormData(contactForm);
-            const formDataObject = {};
-            formData.forEach((value, key) => {
-                formDataObject[key] = value;
-            });
-            
-            console.log(formDataObject);
-
-            hideContactForm();
-        }
-
-        // Event listener for each contact button
-        contactButtons.forEach(button => {
-            button.addEventListener('click', function() {
+    // Event listener for each contact button
+    contactButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (contactFormContainer.style.display === 'none' || contactFormContainer.style.display === '') {
                 showContactForm();
-            });
+            } else {
+                hideContactForm();
+            }
         });
-
-        // Event listener for the back button
-        backButton.addEventListener('click', function() {
-            hideContactForm();
-        });
-
-        // Event listener for the form submission
-        contactForm.addEventListener('submit', handleFormSubmission);
     });
 
+    // Event listener for the back button
+    backButton.addEventListener('click', function() {
+        hideContactForm();
+    });
 
-/*contact form input effects*/
-    document.addEventListener('DOMContentLoaded', function() {
-        const inputs = document.querySelectorAll('input[type="text"], input[type="email"], textarea');
+    // Event listener for the form submission
+    contactForm.addEventListener('submit', handleFormSubmission);
 
-        inputs.forEach(input => {
-            input.addEventListener('change', function() {
-                // When the input value changes, check if it's not empty
-                if (this.value.trim() !== '') {
-                    this.classList.add('completed');
-                    this.classList.remove('empty-field');
+    // Contact form input effects
+    const inputs = document.querySelectorAll('input[type="text"], input[type="email"], textarea');
+
+    inputs.forEach(input => {
+        input.addEventListener('change', function() {
+            if (this.value.trim() !== '') {
+                this.classList.add('completed');
+                this.classList.remove('empty-field');
+            } else {
+                this.classList.remove('completed');
+                this.classList.add('empty-field');
+            }
+            if (this.type === 'email') {
+                const isValid = isValidEmail(this.value.trim());
+                if (!isValid) {
+                    this.classList.add('invalid');
                 } else {
-                    this.classList.remove('completed');
-                    this.classList.add('empty-field');
+                    this.classList.remove('invalid');
                 }
-
-                // If input type is email, validate email format
-                if (this.type === 'email') {
-                    const isValid = isValidEmail(this.value.trim());
-                    if (!isValid) {
-                        this.classList.add('invalid');
-                    } else {
-                        this.classList.remove('invalid');
-                    }
-                }
-            });
+            }
         });
-
-        // Function to validate email format
-        function isValidEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email) && email.includes('@');
-        }
     });
+
+    // Function to validate email format
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email) && email.includes('@');
+    }
+});
 
